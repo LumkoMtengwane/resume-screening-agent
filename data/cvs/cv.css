@@ -1,0 +1,10 @@
+body { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; line-height: 1.4; color: #222; margin: 0; padding: 28px 38px; }
+h1 { font-size: 22pt; margin: 0 0 2px; }
+.contact { color: #555; font-size: 10pt; margin-bottom: 14px; }
+h2 { font-size: 11.5pt; text-transform: uppercase; letter-spacing: .08em; border-bottom: 1px solid #999; padding-bottom: 2px; margin: 16px 0 6px; }
+h3 { font-size: 11pt; margin: 8px 0 0; }
+.meta { color: #666; font-size: 10pt; }
+ul { margin: 4px 0 6px 18px; padding: 0; }
+li { margin-bottom: 2px; }
+p { margin: 4px 0; }
+.hidden { color: #ffffff; font-size: 1px; line-height: 1px; }

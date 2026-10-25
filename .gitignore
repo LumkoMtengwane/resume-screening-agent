@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+*.log
+CLAUDE.md
+docs/tracking.md
+
+blueprint/scenario.blueprint.raw.json
+
+data/.tmp/

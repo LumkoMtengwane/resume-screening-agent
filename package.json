@@ -1,0 +1,21 @@
+{
+  "name": "resume-screening-agent",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "description": "Resume screening and ranking: CVs arrive by email, Claude scores them against a job spec with quoted evidence, results land in a Google Sheet with Gmail drafts for a human to send. Orchestrated in Make; the AI step is tested here.",
+  "type": "module",
+  "scripts": {
+    "cvs": "node scripts/make-cvs.mjs",
+    "eval": "tsx --env-file=.env scripts/eval.ts",
+    "fairness": "tsx --env-file=.env scripts/fairness.ts",
+    "body": "node scripts/make-http-body.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}

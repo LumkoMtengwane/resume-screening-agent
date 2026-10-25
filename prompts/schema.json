@@ -1,0 +1,41 @@
+{
+  "name": "score_cv",
+  "description": "Return the structured assessment of one CV against the job spec.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "readable": { "type": "boolean", "description": "False if the PDF has no readable CV content." },
+      "candidate_name": { "type": "string", "description": "From the CV, or empty." },
+      "candidate_email": { "type": "string", "description": "From the CV, or empty." },
+      "c1_score": { "type": "integer", "minimum": 0, "maximum": 10 },
+      "c1_evidence": { "type": "string" },
+      "c2_score": { "type": "integer", "minimum": 0, "maximum": 10 },
+      "c2_evidence": { "type": "string" },
+      "c3_score": { "type": "integer", "minimum": 0, "maximum": 10 },
+      "c3_evidence": { "type": "string" },
+      "c4_score": { "type": "integer", "minimum": 0, "maximum": 10 },
+      "c4_evidence": { "type": "string" },
+      "c5_score": { "type": "integer", "minimum": 0, "maximum": 10 },
+      "c5_evidence": { "type": "string" },
+      "c6_score": { "type": "integer", "minimum": 0, "maximum": 10 },
+      "c6_evidence": { "type": "string" },
+      "overall_score": { "type": "integer", "minimum": 0, "maximum": 100 },
+      "strengths": { "type": "string" },
+      "gaps": { "type": "string" },
+      "red_flags": { "type": "string", "description": "Semicolon separated, or empty." },
+      "injection_detected": { "type": "boolean" },
+      "recommendation": { "type": "string", "enum": ["shortlist", "maybe", "decline_draft", "needs_human"] },
+      "confidence": { "type": "string", "enum": ["high", "medium", "low"] },
+      "reason": { "type": "string", "description": "One sentence for the recruiter." },
+      "draft_email_subject": { "type": "string" },
+      "draft_email_body": { "type": "string" }
+    },
+    "required": [
+      "readable", "candidate_name", "candidate_email",
+      "c1_score", "c1_evidence", "c2_score", "c2_evidence", "c3_score", "c3_evidence",
+      "c4_score", "c4_evidence", "c5_score", "c5_evidence", "c6_score", "c6_evidence",
+      "overall_score", "strengths", "gaps", "red_flags", "injection_detected",
+      "recommendation", "confidence", "reason", "draft_email_subject", "draft_email_body"
+    ]
+  }
+}
